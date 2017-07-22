@@ -19,9 +19,19 @@ class AllItems extends React.Component {
   }
 
   render() {
+
+    let items = this.state.items.map((item) => {
+      return (
+        <div key={item.id}>
+            <h3>{item.name}</h3>
+            <p>{item.description}</p>
+        </div>
+      )
+    })
     return (
       <div>
         <h1>ALL ITEMS</h1>
+        {items}
       </div>
     );
   }
